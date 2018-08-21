@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutRound.cshtml";
+}
+<style type="text/css">
+    .fieldset1 {
+        font-family: "微軟正黑體";
+        font-size: 20px;
+        border: 2px solid salmon;
+        background: beige;
+        border-radius: 10px;
+        width: 300px;
+        margin:30px auto;
+        padding:5px;
+    }
+    .center {
+        text-align: center;
+    }
+    .textbox {
+        font-family: "微軟正黑體";
+        font-size: 20px;
+        margin: 10px auto;
+    }
+    .li1 {
+        text-decoration:none;
+    }
+    .ul1 {
+        list-style-type:none;
+    }
+    
+
+</style>
+
+
+<form method="post" action="~/Login/Login" enctype="multipart/form-data">
+    
+    <div align="center" >
+        <fieldset class="fieldset1">
+            <h5>@ViewBag.WrongMessage </h5>
+            <table>
+                <tr><td>Account Number</td></tr>
+                <tr><td><input type="text" name="acNum" placeholder="Account Name" required class="textbox" /></td></tr>
+                <tr><td>Password</td></tr>
+                <tr><td><input type="password" name="pwd" placeholder="Password" required class="textbox" /></td></tr>
+            </table>
+            <input type="submit" value="Login" class="textbox" />
+            <input type="reset" value="Reset" class="textbox" />
+            <a href="../Login/New"><label>Create new Account</label></a>
+        </fieldset>
+    </div>
+    
+</form>
+

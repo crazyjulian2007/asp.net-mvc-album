@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MVCAlbum.Models.tAlbum>
+
+@{
+    ViewBag.Title = "Upload New Photo";
+    Layout = "~/Views/Shared/_LayoutRound.cshtml";
+}
+<h2 align="center">Upload New Photo</h2>
+
+<form method="post" action="~/Upload/Upload" enctype="multipart/form-data">
+    <br />
+    <br />
+    <br />
+    <div align="center" >
+        <table >
+            <tr><td>ViewBag.User</td></tr>
+            <tr><td>Title</td></tr>
+            <tr><td><input type="text" name="fTitle" required placeholder="Title" /></td></tr>
+            <tr><td>Description</td></tr>
+            <tr>
+                <td>
+                    <textarea rows="5" cols="40" name="fDescription" required placeholder="Description"></textarea>
+                </td>
+            </tr>
+            <tr><td>Date</td></tr>
+            <tr><td><input type="date" name="fDate" required /></td></tr>
+            <tr><td>Picture</td></tr>
+            <tr><td><input type="file" name="photo" /></td></tr>
+            <tr><td><br /></td></tr>
+            <tr><td><input type="submit" value="Upload" /></td></tr>
+        </table>
+    </div>
+</form>

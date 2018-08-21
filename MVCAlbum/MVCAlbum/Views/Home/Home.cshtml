@@ -1,0 +1,60 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<MVCAlbum.Models.tAlbum>
+@{
+    ViewBag.Title = "The Album";
+    Layout = "~/Views/Shared/_LayoutRound.cshtml";
+}
+<style type="text/css">
+    .div1{
+        float:left;
+    }
+
+</style>
+<script type="text/javascript">
+    $(function () {
+        $('#gallery2 a').fancybox(
+            {
+                openEffect: 'elastic',
+                closeEffect: 'elastic',
+                helpers: { type: 'inside' }, overlay: {
+                    css: { 'background': 'rgba(238,238,238,0.85)' }
+                }
+            }
+        );
+    });
+</script>
+
+    <div class="container">
+        <!-- Introduction Row -->
+        <!-- Team Members Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="my-4">My Photo<br /></h2>
+                <h5>@ViewBag.User</h5>
+            </div>
+
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-sm-6 text-center mb-4" id="gallery2">
+                    <a href="@item.fPath" data-fancybox-group="gallery" title="@item.fTitle"><img class="rounded-circle img-fluid d-block mx-auto" src='@item.fPath' width="200" height="200"></a>
+                    <h3>@item.fTitle</h3>
+                    <p><small>@item.fDate</small></p>
+                    <p>@item.fDescription</p>
+                </div>
+            }
+        </div>
+        <div class="div1">
+            <span class="div1">Page:</span>
+            <span class="div1">
+                @Html.PagedListPager(Model, page => Url.Action("Home", new { page }))
+            </span>
+        </div>
+        
+
+    </div>
+
+
+
+
+

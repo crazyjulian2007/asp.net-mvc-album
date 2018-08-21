@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbAlbumDemoModelStoreContainer" CdmEntityContainer="dbAlbumDemoEntities">
+    <EntitySetMapping Name="tAlbum">
+      <EntityTypeMapping TypeName="dbAlbumDemoModel.tAlbum">
+        <MappingFragment StoreEntitySet="tAlbum">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fTitle" ColumnName="fTitle" />
+          <ScalarProperty Name="fDescription" ColumnName="fDescription" />
+          <ScalarProperty Name="fDate" ColumnName="fDate" />
+          <ScalarProperty Name="fPath" ColumnName="fPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tUser">
+      <EntityTypeMapping TypeName="dbAlbumDemoModel.tUser">
+        <MappingFragment StoreEntitySet="tUser">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fAcountName" ColumnName="fAcountName" />
+          <ScalarProperty Name="fPassword" ColumnName="fPassword" />
+          <ScalarProperty Name="fUserName" ColumnName="fUserName" />
+          <ScalarProperty Name="fMail" ColumnName="fMail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
